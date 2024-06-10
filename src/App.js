@@ -39,7 +39,7 @@ const App = () => {
 
       //detection
       const face = await net.estimateFaces({ input: video });
-
+      
       // ctx get from canvas
       const ctx = canvasRef.current.getContext('2d');
       requestAnimationFrame(() => {
@@ -50,15 +50,13 @@ const App = () => {
 
   useEffect(() => {
     runFacemash();
-
     // eslint-disable-next-line
   }, []);
 
   return (
     <div className="App">
       <header className="App-header">
-        <Webcam ref={webCamRef} className="webcam" />
-      
+        <Webcam ref={webCamRef} className="webcam" /> 
       <canvas ref={canvasRef} className="canvas" />
       </header>
     </div>
